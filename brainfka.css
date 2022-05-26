@@ -1,0 +1,398 @@
+ *{
+ box-sizing:border-box;
+ font-family:Arial, Verdana, sans-serif;
+ }
+ 
+ html,body{
+ margin:0;
+ padding:0;
+ }
+ 
+ header{
+ background:url("karate.jpg") fixed center;
+ background-repeat:no-repeat;
+ width:100%;
+ height:100%;
+ background-size:cover;
+ }
+ 
+ .lightbox{
+ background:rgba(0,0,0,0.7);
+ top:0;
+ left:0;
+ display:table;
+ width:100%;
+ height:100%;
+ }
+
+.topnav{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+border-bottom:3px solid #000;
+}
+
+.topnav li{
+float:left;
+width:100%;
+padding:15px;
+text-align:center;
+}
+
+.topnav li a{
+text-decoration:none;
+color:white;
+font-size:20px;
+font-weight:bold;
+}
+
+.logo{
+width:100%;
+}
+
+.logo::after{
+content:"";
+display:table;
+clear:both;
+}
+.logo img{
+ width:150px;
+ height:200px;
+ border-radius:50%;
+ margin-right:20px;
+ margin-top:30px;
+ display:block;
+ float:right;
+ }
+ 
+ .center{
+ vertical-align:middle;
+ text-align:center;
+ }
+
+.center .title{
+text-transform:uppercase;
+color:white;
+font-family:Arial, Verdana, sans-serif;
+}
+
+.center .title h2{
+font-size:30px;
+padding-top:50px;
+padding-bottom:30px;
+text-align:center;
+}
+
+.center .title h1{
+font-size:50px;
+padding-top:30px;
+text-align:center;
+}
+
+.center span{
+text-align:center;
+font-size:40px;
+padding-top:80px;
+padding-bottom:20px;
+display:block;
+font-weight:bold;
+}
+
+.center span::after{
+content:"";
+animation:changetext 10s linear infinite;
+color:#00b894;
+}
+
+@keyframes changetext{
+0%{content:"DISCIPLINE"}
+20%{content:"CREATIVITY"}
+40%{content:"INTELLIGENCE"}
+60%{content:"SELF-CONTROL"}
+80%{content:"TENACITY"}
+100%{content:"COMBATIVENESS"}
+}
+
+button{
+width:200px;
+height:50px;
+border:1px solid #000;
+border-radius:10px;
+font-size:25px;
+margin:0 auto 500px;
+background:transparent;
+}
+button a{
+text-decoration:none;
+color:white;
+}
+button:hover{
+background:#00b894;
+}
+
+.title2 h2{
+font-size:40px;
+padding-top:50px;
+padding-bottom:30px;
+text-align:center;
+}
+
+.card{
+width:60%;
+height:auto;
+box-shadow:5px 10px 15px rgba(0,0,0,0.4);
+margin:20px auto;
+transition:1s linear;
+}
+.card:hover{
+width:70%;
+}
+.card img{
+width:100%;
+height:auto;
+}
+.card p{
+padding:25px 5px 5px;
+text-align:center;
+font-family:cursive;
+font-size:20px;
+}
+
+.tooltip{
+position:relative;
+}
+
+.tooltip-content{
+position:absolute;
+background:rgba(0,0,0,.2);
+padding:3px;
+margin:0px 7px;
+color:black;
+border-radius:10px;
+z-index:1;
+text-align:center;
+top:100%;
+left:50%;
+width:150px;
+opacity:0;
+transition:1.5s ease;
+}
+.tooltip:hover > .tooltip-content{
+opacity:1;
+}
+.tooltip > .tooltip-content::after{
+content:" ";
+position:absolute;
+margin-top:-9.5px;
+top:-1%;
+left:5%;
+border:5px solid transparent;
+border-bottom-color:rgba(0,0,0,.2);
+}
+.light{
+display:table;
+position:fixed;
+top:-1000%;
+left:0;
+width:100%;
+height:100%;
+transition:1s ease;
+background:rgba(0,0,0,.9);
+}
+.light:target{
+top:0;
+}
+.close{
+position:absolute;
+top:10px;
+right:10px;
+font-size:35px;
+font-weight:300;
+text-decoration:none;
+color:white;
+}
+.light-content{
+display:table-cell;
+vertical-align:middle;
+text-align:center;
+}
+.light-content img{
+max-width:100%;
+height:auto;
+}
+
+.container{
+display:flex;
+flex-wrap:nowrap;
+flex-direction:row;
+justify-content:center;
+height:auto;
+}
+
+.container>div{
+background:#58181F;
+color:white;
+margin:10px;
+padding:30px;
+border-radius:15px;
+height:auto;
+}
+
+.cont1{
+margin:30px auto;
+width:50%;
+background:pink;
+border-radius:15px;
+height:100%;
+
+}
+
+.cont1 img{
+width:60px;
+height:60px;
+border-radius:50%;
+display:block;
+margin:7px;
+float:left;
+}
+
+.cont1 p{
+font-size:20px;
+padding:5px;
+margin-top:-3px;
+margin-bottom:-5px;
+padding-bottom:30px;
+}
+
+.cont1 .star img{
+float:right;
+width:15px;
+height:15px;
+margin-top:-20px;
+margin-left:0;
+}
+
+footer{
+background:linear-gradient(to top, white, rgb(255,192,194));
+position:relative;
+font-size:20px;
+}
+
+.footer-head{
+margin:15px;
+padding:10px;
+display:flex;
+justify-content:space-around;
+}
+
+.footer-head ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+.footer-head ul li{
+padding:5px;
+border:1px solid transparent;
+border-bottom-color:#000;
+border-bottom-left-radius:10px;
+border-bottom-right-radius:10px;
+}
+
+.footer-head ul li:first-child{
+border:none;
+}
+
+.footer-head .contact{
+width:60%;
+text-align:center;
+}
+
+.footer-head .contact p{
+font-size:25px;
+}
+
+.footer-head .social{
+width:40%;
+text-align:center;
+margin:5px;
+}
+
+.footer-head .social p{
+font-size:25px;
+}
+
+.footer-head .social a{
+text-decoration:none;
+color:black;
+padding:2px 5px 0px;
+}
+
+hr{
+border:1px solid black;
+color:black;
+}
+.footer-copyright img{
+width:18px;
+height:18px;
+}
+.footer-copyright{
+padding:15px;
+margin-bottom:50px;
+text-align:center;
+}
+
+
+@media only screen and (min-width:720px){
+.topnav li{
+ width:12.5%;
+ }
+ 
+ .title h2{
+ font-size:50px;
+ padding:50px 80px 40px;
+ text-align:center;
+ }
+ .title2 h2{
+ font-size:60px;
+ padding:50px 40px;
+ text-align:center;
+ }
+ 
+ .title h1{
+ font-size:70px;
+ padding:50px 80px 40px;
+ text-align:center;
+ }
+ .card p{
+ font-size:35px;
+ }
+ 
+}
+
+@media only screen and (max-width:720px){
+.container{
+ flex-direction:column;
+ }
+ 
+ .logo img{
+ width:100px;
+ height:150px;
+ border-radius:50%;
+ margin-right:20px;
+ margin-top:50px;
+ display:block;
+ float:right;
+ }
+ 
+ .footer-head{
+ flex-direction:column;
+ justify-content:space-around;
+ align-items:center;
+ }
+ .footer-head .contact, .footer-head .social{
+ width:100%;
+ }
+ 
+}
